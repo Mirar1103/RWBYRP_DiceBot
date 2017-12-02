@@ -45,7 +45,6 @@ function roll(input) {
 
     if(die=='d') {
         var dieResult = 0;
-        console.log(difficulty + ";" + die);
         for (i = 0; i < numberOfDie; i++) {
             dieResult += random(1, difficulty);
         }
@@ -69,7 +68,7 @@ function roll(input) {
                 }
 
             }
-           result += successes + dieResults +') Ones:'+ones;
+           result += successes +' Ones:'+ones +' '+ dieResults +')';
     } else {
         result = 'Please use a command I understand, Begin it with !roll and then use either [number]d[dieSize] or [numberOfDice]m[difficulty]. For example: 4m8 would mean I roll $ tn sided dies agaisnt a targeet difficulty of 8';
     }
