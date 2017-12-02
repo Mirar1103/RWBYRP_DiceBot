@@ -1,0 +1,10 @@
+{
+  "name": "RWBYRP_DieBot",
+  "version": "0.0.1",
+  "description": "Dice Rolling bot for the RWBYRP's Discord server",
+  "author" : "Maximilian Schug",
+  "main" : "bot.js",
+  "dependencies": {
+
+  }
+}
