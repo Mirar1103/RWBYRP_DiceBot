@@ -2,12 +2,14 @@
   "name": "RWBYRP_DieBot",
   "version": "0.0.1",
   "description": "Dice Rolling bot for the RWBYRP's Discord server",
-  "author" : "Maximilian Schug",
-  "main" : "bot.js",
+  "author": "Maximilian Schug",
+  "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0"
+    "discord.io": "^2.5.3",
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
   }
 }
