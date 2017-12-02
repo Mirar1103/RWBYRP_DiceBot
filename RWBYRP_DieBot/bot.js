@@ -11,8 +11,12 @@ xhr.addEventListener('load', function(event) {
     if (xhr.status >= 200 && xhr.status < 300) {
         var answerjson = xhr.responseText;
         var answer = JSON.parse(answerjson);
-        var reply = "Result: " + answer.result + ',' + answer.details;
-        console.log(reply);
+        var reply = "Code: "+answer.input +" Result: " + answer.result + ',' + answer.details;
+        if(answer.input.match('m')){
+            if(answer.result.toString().match(/1/g)) {
+                reply += 'I am sadly unable to subtract the ones from the Successes';
+            }
+        }
         bot.sendMessage({
             to: ChannelID,
             message: reply
@@ -51,7 +55,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 });
 function roll(input) {
     var address = "https://rolz.org/api/?"+input+".json";
-    console.log(address);
     xhr.open("GET", address);
     xhr.send();
 }
